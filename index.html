@@ -85,7 +85,7 @@
     .info-box strong { color: #fff; display: block; margin-bottom: 2px; font-size: 14px; }
 
     /* accordion */
-    .acc { border: 1px solid #222; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .acc { border: 1px solid #222; border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
 
     .acc-btn {
       width: 100%;
@@ -137,6 +137,7 @@
     .acc.open .acc-btn .chevron { transform: rotate(180deg); }
     .acc.open .acc-btn { background: #1a1a1a; }
     .acc.open .acc-btn .hint { display: none; }
+    .acc.open{box-shadow:0 0 0 1px #2a2a2a;}
 
     .acc-body {
       display: none;
@@ -254,14 +255,30 @@
     color:#888;
     line-height:1.5;
   }
-  
-.lit-highlight{
-  padding-top:6px;
-}
+
+  .lit-songs{
+    margin-top:6px;
+    line-height:1.6;
+  }
+
+  .lit-title{
+    font-weight:600;
+    font-size:14px;
+    color:#f5f5f5;
+  }
   
   .lit-highlight strong{
     color:#FF6A00;
     font-weight:600;
+  }
+
+  .lit-step{
+    transition:background .15s;
+  }
+  
+  .lit-step:hover{
+    background:#161616;
+    border-radius:6px;
   }
     /* materiais */
     .mat-label {
@@ -410,12 +427,10 @@
   <div class="lit-step">
     <div class="lit-num">2</div>
     <div class="lit-title">Louvor animado</div>
-
-    <div class="lit-highlight">
-      <div class="lit-songs">
-        Os Que Confiam<br>
-        Dançar na Chuva + Vem me Buscar + É Proibido
-      </div>
+  
+    <div class="lit-songs">
+      Os Que Confiam<br>
+      Dançar na Chuva + Vem me Buscar + É Proibido
     </div>
   </div>
 

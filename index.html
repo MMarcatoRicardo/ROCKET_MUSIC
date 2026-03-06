@@ -16,49 +16,52 @@
     }
 
     .header {
-      padding: 28px 20px 24px;
+      padding: 32px 20px 28px;
       text-align: center;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #1e1e1e;
+      background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
     }
     .header .tag {
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       color: #FF6A00;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      opacity: 0.9;
     }
-    .header h1 { font-size: 26px; font-weight: 700; color: #fff; }
-    .header .sub { font-size: 13px; color: #666; margin-top: 4px; }
+    .header h1 { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
+    .header .sub { font-size: 13px; color: #5a5a5a; margin-top: 6px; }
 
     /* countdown */
     .countdown {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 8px;
+      margin-top: 22px;
       flex-wrap: wrap;
     }
     .cd-block {
       background: #161616;
-      border: 1px solid #222;
-      border-radius: 8px;
-      padding: 12px 16px;
+      border: 1px solid #252525;
+      border-radius: 10px;
+      padding: 12px 18px;
       text-align: center;
-      min-width: 68px;
+      min-width: 72px;
     }
     .cd-num {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
       color: #FF6A00;
       line-height: 1;
       font-variant-numeric: tabular-nums;
+      letter-spacing: -1px;
     }
     .cd-lbl {
-      font-size: 10px;
+      font-size: 9px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #555;
-      margin-top: 4px;
+      letter-spacing: 1.8px;
+      color: #444;
+      margin-top: 5px;
     }
     .cd-done {
       font-size: 18px;
@@ -70,22 +73,23 @@
     .wrap { max-width: 600px; margin: 0 auto; padding: 20px 16px 60px; }
 
     .info-box {
-      background: #161616;
+      background: #141414;
       border: 1px solid #222;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 14px 16px;
       margin-bottom: 10px;
       font-size: 13px;
       display: flex;
       align-items: center;
-      gap: 12px;
-      color: #aaa;
+      gap: 14px;
+      color: #888;
+      line-height: 1.5;
     }
-    .info-box .info-icon { font-size: 20px; flex-shrink: 0; }
-    .info-box strong { color: #fff; display: block; margin-bottom: 2px; font-size: 14px; }
+    .info-box .info-icon { font-size: 22px; flex-shrink: 0; }
+    .info-box strong { color: #f0f0f0; display: block; margin-bottom: 2px; font-size: 14px; font-weight: 600; }
 
     /* accordion */
-    .acc { border: 1px solid #222; border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .acc { border: 1px solid #222; border-radius: 12px; margin-bottom: 10px; overflow: hidden; transition: box-shadow 0.2s, border-color 0.2s; }
 
     .acc-btn {
       width: 100%;
@@ -104,8 +108,10 @@
       gap: 10px;
       transition: background 0.15s;
       -webkit-tap-highlight-color: transparent;
+      user-select: none;
     }
-    .acc-btn:hover { background: #1c1c1c; }
+    .acc-btn:hover { background: #1d1d1d; }
+    .acc-btn:active { background: #222; }
     .acc-btn .left {
       display: flex;
       align-items: center;
@@ -129,15 +135,16 @@
       white-space: nowrap;
     }
     .acc-btn .chevron {
-      font-size: 11px;
-      color: #444;
-      transition: transform 0.2s;
+      font-size: 13px;
+      color: #555;
+      transition: transform 0.25s ease, color 0.2s;
       line-height: 1;
     }
-    .acc.open .acc-btn .chevron { transform: rotate(180deg); }
+    .acc.open .acc-btn .chevron { transform: rotate(180deg); color: #FF6A00; }
     .acc.open .acc-btn { background: #1a1a1a; }
+    .acc.open .acc-btn .left { color: #FF8C33; }
     .acc.open .acc-btn .hint { display: none; }
-    .acc.open{box-shadow:0 0 0 1px #2a2a2a;}
+    .acc.open { box-shadow: 0 0 0 1px #FF6A0033; border-color: #FF6A0033; }
 
     .acc-body {
       display: none;
@@ -145,22 +152,32 @@
       border-top: 1px solid #1e1e1e;
       background: #111;
     }
+    .acc.open .acc-body {
+      display: block;
+      animation: fadeSlideDown 0.2s ease;
+    }
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
     /* escala */
     .escala-row {
       display: flex;
       align-items: center;
-      padding: 9px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #1a1a1a;
       font-size: 14px;
       gap: 12px;
+      transition: background 0.12s;
     }
     .escala-row:last-child { border-bottom: none; }
-    .role { color: #555; font-size: 12px; min-width: 130px; }
-    .nome { color: #fff; font-weight: 500; }
+    .escala-row:hover { background: #161616; border-radius: 6px; padding-left: 6px; }
+    .role { color: #666; font-size: 12px; min-width: 140px; }
+    .nome { color: #f0f0f0; font-weight: 600; }
 
     /* setlist */
-    .set-group { margin-bottom: 20px; }
+    .set-group { margin-bottom: 22px; }
     .set-group:last-child { margin-bottom: 0; }
     .set-group-title {
       font-size: 10px;
@@ -168,31 +185,37 @@
       letter-spacing: 2px;
       color: #FF6A00;
       margin-bottom: 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #222;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e1e1e;
+      opacity: 0.85;
     }
     .song {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 8px 0;
+      padding: 9px 4px;
       border-bottom: 1px solid #1a1a1a;
       font-size: 13px;
+      border-radius: 6px;
+      transition: background 0.12s;
     }
+    .song:hover { background: #161616; }
     .song:last-child { border-bottom: none; }
-    .song-n { color: #444; min-width: 20px; font-size: 12px; padding-top: 1px; }
+    .song-n { color: #3a3a3a; min-width: 20px; font-size: 12px; padding-top: 2px; font-variant-numeric: tabular-nums; }
     .song-info { flex: 1; }
-    .song-name { color: #e5e5e5; font-weight: 500; line-height: 1.4; }
-    .song-artist { color: #555; font-size: 12px; margin-top: 1px; }
+    .song-name { color: #e8e8e8; font-weight: 500; line-height: 1.4; }
+    .song-artist { color: #555; font-size: 12px; margin-top: 2px; }
     .song-key {
       font-size: 11px;
-      font-weight: 600;
-      color: #FF6A00;
-      background: #FF6A0015;
-      padding: 2px 7px;
-      border-radius: 4px;
+      font-weight: 700;
+      color: #FF8C33;
+      background: #FF6A0020;
+      border: 1px solid #FF6A0030;
+      padding: 2px 8px;
+      border-radius: 5px;
       flex-shrink: 0;
       margin-top: 2px;
+      letter-spacing: 0.3px;
     }
 
   /* liturgia */

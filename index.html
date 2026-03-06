@@ -195,16 +195,78 @@
       margin-top: 2px;
     }
 
-    /* liturgia */
-    .lit-item {
-      padding: 10px 0;
-      border-bottom: 1px solid #1a1a1a;
-      font-size: 13px;
-    }
-    .lit-item:last-child { border-bottom: none; }
-    .lit-title { color: #e5e5e5; font-weight: 600; margin-bottom: 2px; }
-    .lit-sub { color: #555; font-size: 12px; line-height: 1.5; }
-
+  /* liturgia */
+  
+  .acc.open#acc-lit .acc-body{
+    background:#0d0d0d;
+  }
+  
+  .liturgia {
+    position: relative;
+    margin-top: 4px;
+  }
+  
+  .liturgia::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#1f1f1f;
+  }
+  
+  .lit-step{
+    position:relative;
+    padding:14px 14px 14px 40px;
+    border-bottom:1px solid #1a1a1a;
+  }
+  
+  .lit-step:last-child{
+    border-bottom:none;
+  }
+  
+  .lit-num{
+    position:absolute;
+    left:4px;
+    top:16px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#FF6A00;
+    color:#000;
+    font-size:11px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .lit-title{
+    font-weight:600;
+    font-size:14px;
+    color:#fff;
+    margin-bottom:4px;
+  }
+  
+  .lit-songs{
+    font-size:12px;
+    color:#888;
+    line-height:1.5;
+  }
+  
+  .lit-highlight{
+    background:#141414;
+    border:1px solid #222;
+    border-radius:6px;
+    padding:10px 12px;
+    margin-top:6px;
+  }
+  
+  .lit-highlight strong{
+    color:#FF6A00;
+    font-weight:600;
+  }
     /* materiais */
     .mat-label {
       font-size: 11px;
@@ -340,18 +402,89 @@
       <span class="left"><span class="icon">📋</span> Ordem do Culto</span>
       <span class="right"><span class="hint">clique para ver</span><span class="chevron">▼</span></span>
     </button>
-    <div class="acc-body">
-      <div class="lit-item"><div class="lit-title">Abertura com dinâmica</div></div>
-      <div class="lit-item"><div class="lit-title">Músicas Animadas</div><div class="lit-sub">Os Que Confiam · Dançar na Chuva + Vem me Buscar + É Proibido</div></div>
-      <div class="lit-item"><div class="lit-title">Worship – Parte 1</div><div class="lit-sub">Eu Só Quero Tua Presença · É Tudo Sobre Você · Oh Se Fendesse</div></div>
-      <div class="lit-item"><div class="lit-title">Oração e Intercessão</div></div>
-      <div class="lit-item"><div class="lit-title">Worship – Parte 2</div><div class="lit-sub">A Boa Parte · Lugar de Habitação · Tua Presença Vale Mais (Bravos + Brito)</div></div>
-      <div class="lit-item"><div class="lit-title">Ministração da Palavra</div></div>
-      <div class="lit-item"><div class="lit-title">Medley – Parte 2</div><div class="lit-sub">Nada Mais · Uma Vez · Doce Presença</div></div>
-      <div class="lit-item"><div class="lit-title">Apelo + Oração Final</div></div>
-      <div class="lit-item"><div class="lit-title">Música Animada de Encerramento</div><div class="lit-sub">Estações ou Arde Outra Vez ou A Alegria do Senhor</div></div>
+<div class="acc-body">
+
+<div class="liturgia">
+
+  <div class="lit-step">
+    <div class="lit-num">1</div>
+    <div class="lit-title">Abertura com dinâmica</div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">2</div>
+    <div class="lit-title">Louvor animado</div>
+
+    <div class="lit-highlight">
+      <div class="lit-songs">
+        Os Que Confiam<br>
+        Dançar na Chuva + Vem me Buscar + É Proibido
+      </div>
     </div>
   </div>
+
+  <div class="lit-step">
+    <div class="lit-num">3</div>
+    <div class="lit-title">Worship — Parte 1</div>
+
+    <div class="lit-songs">
+      Eu Só Quero Tua Presença<br>
+      É Tudo Sobre Você<br>
+      Oh Se Fendesse
+    </div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">4</div>
+    <div class="lit-title">Oração e Intercessão</div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">5</div>
+    <div class="lit-title">Worship — Parte 2</div>
+
+    <div class="lit-songs">
+      A Boa Parte<br>
+      Lugar de Habitação<br>
+      Tua Presença Vale Mais
+    </div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">6</div>
+    <div class="lit-title">Ministração da Palavra</div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">7</div>
+    <div class="lit-title">Ministração final</div>
+
+    <div class="lit-songs">
+      Nada Mais<br>
+      Uma Vez<br>
+      Doce Presença
+    </div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">8</div>
+    <div class="lit-title">Apelo + Oração final</div>
+  </div>
+
+  <div class="lit-step">
+    <div class="lit-num">9</div>
+    <div class="lit-title">Encerramento animado</div>
+
+    <div class="lit-songs">
+      Estações<br>
+      Arde Outra Vez<br>
+      A Alegria do Senhor
+    </div>
+  </div>
+
+</div>
+
+</div>
 
   <!-- MATERIAIS -->
   <div class="acc" id="acc-mat">

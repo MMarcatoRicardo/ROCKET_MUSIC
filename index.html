@@ -145,7 +145,6 @@
       border-top: 1px solid #1e1e1e;
       background: #111;
     }
-    .acc.open .acc-body { display: block; }
 
     /* escala */
     .escala-row {
@@ -344,6 +343,37 @@
       color: #999;
       margin-top: 14px;
     }
+
+    /* melhora leitura da liturgia */
+
+.lit-item{
+  padding:12px 0;
+  border-bottom:1px solid #1a1a1a;
+}
+
+.lit-item:last-child{
+  border-bottom:none;
+}
+
+.lit-title{
+  font-weight:600;
+  color:#fff;
+}
+
+.lit-sub{
+  font-size:13px;
+  color:#888;
+  margin-top:3px;
+  line-height:1.5;
+}
+
+/* hover ajuda no celular */
+
+.lit-item:hover{
+  background:#161616;
+  border-radius:6px;
+  padding-left:6px;
+}
     .nota strong { color: #FFD166; }
   </style>
 </head>

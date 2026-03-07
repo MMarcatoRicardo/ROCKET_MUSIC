@@ -368,6 +368,27 @@
     .btn-yt:hover { border-color: #ff4444; }
     .btn-yt .yt-hint { font-size: 11px; color: #663333; margin-left: auto; }
 
+    .btn-drive {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 13px 16px;
+      background: #001220;
+      border: 1px solid #0a2a44;
+      border-radius: 8px;
+      color: #4da6ff;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: border-color 0.15s;
+    }
+    .btn-drive:hover { border-color: #4da6ff; }
+    .btn-drive .drive-hint { font-size: 11px; color: #1a3a55; margin-left: auto; }
+
     .btn-spotify {
       display: flex;
       align-items: center;
@@ -398,6 +419,42 @@
       background: #141414;
       border: 1px solid #222;
       border-radius: 8px;
+    }
+
+    /* dresscode */
+    .dresscode-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 8px 0;
+    }
+    .dc-fire {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .dc-colors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .dc-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+    }
+    .dc-dot {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+    .dc-item span {
+      font-size: 10px;
+      color: #555;
+      text-align: center;
+      letter-spacing: 0.3px;
     }
 
     .nota {
@@ -504,7 +561,7 @@
       </div>
       <div class="set-group">
         <div class="set-group-title">Encerramento</div>
-        <div class="song"><span class="song-n">–</span><div class="song-info"><div class="song-name">A Alegria do Senhor</div><div class="song-artist">Fernandinho</div></div></div>
+        <div class="song"><span class="song-n">11</span><div class="song-info"><div class="song-name">A Alegria do Senhor</div><div class="song-artist">Fernandinho</div></div></div>
       </div>
     </div>
   </div>
@@ -629,13 +686,40 @@
       <div class="mat-label">Medley de Referência</div>
       <div class="medley-info">🎯 Montagem do medley no tom certo — ideal para a banda tocar junto e para o vocal entender a sequência e a tonalidade de cada música.</div>
       <a class="btn-yt" href="https://www.youtube.com/watch?v=TCwEnqhmD0U" target="_blank" rel="noopener">
-        <span>▶</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff5555" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a0000"/></svg>
         <span>MEDLEY FIRENIGHT MARÇO — Rocket CWB</span>
-        <span class="yt-hint">abre em nova aba</span>
+        <span class="yt-hint">YouTube</span>
+      </a>
+      <a class="btn-drive" href="https://drive.google.com/file/d/10eALKClW1-FUfkAy3XiBDBWNqZbAmPW-/view?usp=sharing" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/><path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/><path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/><path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/><path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/><path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/></svg>
+        <span>MEDLEY FIRENIGHT MARÇO — Rocket CWB</span>
+        <span class="drive-hint">Google Drive</span>
       </a>
 
       <div class="nota">
         <strong>Lembrete importante:</strong> Não se preocupem em tirar todos os detalhes! Muito mais do que tocar bem, fazer passagens e um som bonito, queremos estar sensíveis ao Espírito Santo, crescendo e fluindo nEle. Orem por esse sábado! 🔥
+      </div>
+    </div>
+  </div>
+
+  <!-- DRESSCODE -->
+  <div class="acc" id="acc-dress">
+    <button class="acc-btn" onclick="toggle('acc-dress')">
+      <span class="left"><span class="icon">👚</span> Dress Code</span>
+      <span class="right"><span class="hint">clique para ver</span><span class="chevron">▼</span></span>
+    </button>
+    <div class="acc-body">
+      <div class="dresscode-wrap">
+        <span class="dc-fire">🔥</span>
+        <div class="dc-colors">
+          <div class="dc-item"><div class="dc-dot" style="background:#111111; border: 1.5px solid #ffffff;"></div></div>
+          <div class="dc-item"><div class="dc-dot" style="background:#cc1111;"></div></div>
+          <div class="dc-item"><div class="dc-dot" style="background:#d94010;"></div></div>
+          <div class="dc-item"><div class="dc-dot" style="background:#FF6A00;"></div></div>
+          <div class="dc-item"><div class="dc-dot" style="background:#FFD000;"></div></div>
+          <div class="dc-item"><div class="dc-dot" style="background:#ffffff; border: 1.5px solid #333;"></div></div>
+        </div>
+        <span class="dc-fire">🔥</span>
       </div>
     </div>
   </div>
